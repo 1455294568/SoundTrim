@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SoundHandlePlus.UI"
+        xmlns:p="clr-namespace:SoundHandlePlus.Properties"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -25,14 +26,16 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Button Name="savebtn" Content="保存" Background="#006db3" Grid.Column="0" Margin="0 0 5 0" Click="Button_Click" />
-                    <Button Name="clsbtn" Content="关闭" Background="#006db3" Grid.Column="2" Margin="5 0 0 0" Click="Button_Click" />
+                    <Button Name="savebtn" Content="{x:Static p:Resources.Save}" Background="#006db3" Grid.Column="0" Margin="0 0 5 0" Click="Button_Click" />
+                    <Button Name="clsbtn" Content="{x:Static p:Resources.Close}" Background="#006db3" Grid.Column="2" Margin="5 0 0 0" Click="Button_Click" />
                 </Grid>
                 <StackPanel>
-                    <TextBlock Text="常规设置" FontSize="26" Margin="10 20" />
-                    <TextBox Name="siltextbox" materialDesign:HintAssist.Hint="静音阈值"
+                    <TextBlock Text="{x:Static p:Resources.General}" FontSize="26" Margin="10 20" />
+                    <TextBox Name="siltextbox" materialDesign:HintAssist.Hint="{x:Static p:Resources.SlienceThreshold}"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                      Margin="10" FontSize="18"/>
+                    <ComboBox Name="languagebox" ItemsSource="{Binding Languages}" SelectedValuePath="Value" DisplayMemberPath="Key"  materialDesign:HintAssist.Hint="{x:Static p:Resources.Languages}" 
+                     Margin="10" FontSize="18" />
                 </StackPanel>
             </DockPanel>
         </materialDesign:Card>

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SoundHandlePlus"
+        xmlns:p="clr-namespace:SoundHandlePlus.Properties"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -13,7 +14,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="450" Width="800"
+        Title="{x:Static p:Resources.ProgramName}" Height="450" Width="800"
         BorderBrush="#666" BorderThickness="1" WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded">
     <Grid>
@@ -43,20 +44,20 @@
                 </StackPanel>
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
                     <Image Height="30" Margin="2 0 2 0" />
-                    <TextBlock Text="声音处理" VerticalAlignment="Center" Foreground="White" />
+                    <TextBlock Text="{x:Static p:Resources.ProgramName}" VerticalAlignment="Center" Foreground="White" />
                 </StackPanel>
             </DockPanel>
         </Grid>
         <Grid Grid.Row="1">
             <Menu Background="#039be5" Foreground="White" TextOptions.TextRenderingMode="Aliased" TextOptions.TextFormattingMode="Ideal">
-                <MenuItem Header="文件">
-                    <MenuItem Name="chooseFiles" Header="选择文件" Click="MenuItem_Click"/>
+                <MenuItem Header="{x:Static p:Resources.File}">
+                    <MenuItem Name="chooseFiles" Header="{x:Static p:Resources.Open}" Click="MenuItem_Click"/>
                 </MenuItem>
-                <MenuItem Header="设置">
-                    <MenuItem Name="silth" Header="常规设置" Click="MenuItem_Click" />
+                <MenuItem Header="{x:Static p:Resources.Settings}">
+                    <MenuItem Name="silth" Header="{x:Static p:Resources.General}" Click="MenuItem_Click" />
                 </MenuItem>
-                <MenuItem Header="帮助">
-                    <MenuItem Name="about" Header="关于" Click="About_Click" />
+                <MenuItem Header="{x:Static p:Resources.Help}">
+                    <MenuItem Name="about" Header="{x:Static p:Resources.About}" Click="About_Click" />
                 </MenuItem>
             </Menu>
         </Grid>
@@ -84,7 +85,7 @@
                     <materialDesign:PackIcon Name="ghost" Kind="Blinky" Height="100" Width="100" Foreground="#888" HorizontalAlignment="Center" Margin="0 0 0 10" />
                 </Grid>
 
-                <TextBlock Name="tips" Text="请选择文件" Foreground="#888" FontSize="26" />
+                <TextBlock Name="tips" Text="{x:Static p:Resources.OpenFileTip}" Foreground="#888" FontSize="26" />
             </StackPanel>
             <ListBox Name="filelist" ItemsSource="{Binding Filenames}" HorizontalContentAlignment="Stretch"
                      VerticalContentAlignment="Stretch" Background="White" Visibility="Hidden" >
@@ -103,11 +104,11 @@
             </ListBox>
             <Canvas>
                 <Button Name="addfilebtn" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="#006db3"
-                    ToolTip="添加" Canvas.Left="10" Canvas.Bottom="10" Click="Button_Click_1">
+                    ToolTip="{x:Static p:Resources.Add}" Canvas.Left="10" Canvas.Bottom="10" Click="Button_Click_1">
                     <materialDesign:PackIcon Kind="Add" Height="24" Width="24" />
                 </Button>
                 <Button Name="runbtn" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="#006db3"
-                    ToolTip="执行" Canvas.Right="10" Canvas.Bottom="10" Click="Button_Click_1">
+                    ToolTip="{x:Static p:Resources.Execute}" Canvas.Right="10" Canvas.Bottom="10" Click="Button_Click_1">
                     <materialDesign:PackIcon Kind="RunFast" Height="24" Width="24" />
                 </Button>
             </Canvas>

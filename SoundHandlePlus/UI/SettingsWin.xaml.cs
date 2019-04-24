@@ -1,4 +1,5 @@
-﻿using SoundHandlePlus.Utils;
+﻿using SoundHandlePlus.Models;
+using SoundHandlePlus.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,12 @@ namespace SoundHandlePlus.UI
     public partial class SettingsWin : Window
     {
         private ConfigUtil config;
+        private GeneralSettingsViewMode general;
         public SettingsWin()
         {
             InitializeComponent();
+            general = new GeneralSettingsViewMode();
+            this.DataContext = general;
             config = ConfigUtil.GetInstance();
         }
 
@@ -35,14 +39,15 @@ namespace SoundHandlePlus.UI
                 {
                     var _config = config.Config;
                     _config.SilenceThreshold = sbyte.Parse(siltextbox.Text);
+                    _config.Language = languagebox.SelectedValue.ToString();
                     if(config.SaveConfig(_config))
                     {
-                        MessageBox.Show("保存成功");
+                        MessageBox.Show(Properties.Resources.SaveTip1);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("异常");
+                        MessageBox.Show(Properties.Resources.SaveTip2);
                     }
                 }
                 catch (Exception ex)
@@ -59,6 +64,7 @@ namespace SoundHandlePlus.UI
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             siltextbox.Text = config.Config.SilenceThreshold.ToString();
+            languagebox.SelectedValue = config.Config.Language.ToString();
         }
     }
 }

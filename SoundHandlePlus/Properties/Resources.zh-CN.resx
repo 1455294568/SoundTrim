@@ -118,41 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Add</value>
+    <value>添加</value>
   </data>
   <data name="Execute" xml:space="preserve">
-    <value>Execute</value>
+    <value>执行</value>
   </data>
   <data name="File" xml:space="preserve">
-    <value>File</value>
+    <value>文件</value>
   </data>
   <data name="General" xml:space="preserve">
-    <value>General</value>
+    <value>常规设置</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="hello" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hello.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>帮助</value>
   </data>
   <data name="Open" xml:space="preserve">
-    <value>Open</value>
+    <value>打开</value>
   </data>
   <data name="OpenFileTip" xml:space="preserve">
-    <value>Please Open a file</value>
+    <value>请选择文件</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>设置</value>
   </data>
   <data name="ProgramName" xml:space="preserve">
-    <value>SoundHandle</value>
+    <value>声音处理</value>
   </data>
   <data name="SlienceThreshold" xml:space="preserve">
-    <value>SlienceThreshold</value>
+    <value>静音阈值</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
@@ -160,22 +160,22 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="Languages" xml:space="preserve">
-    <value>Languages</value>
-  </data>
   <data name="Longtips1" xml:space="preserve">
-    <value>List is not empty, Yes to override, No to Add</value>
+    <value>队列不为空, 按是覆盖,否追加</value>
   </data>
   <data name="Longtips2" xml:space="preserve">
-    <value>{0} Files are done.</value>
+    <value>{0} 个文件完成.</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning</value>
+    <value>提示</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>语言</value>
   </data>
   <data name="SaveTip1" xml:space="preserve">
-    <value>Saved</value>
+    <value>保存成功</value>
   </data>
   <data name="SaveTip2" xml:space="preserve">
-    <value>Save failed</value>
+    <value>保存失败</value>
   </data>
 </root>

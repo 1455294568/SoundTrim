@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoundHandlePlus.Utils;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,10 @@ namespace SoundHandlePlus
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            var lang = ConfigUtil.GetInstance().Config.Language;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lang);
+        }
     }
 }

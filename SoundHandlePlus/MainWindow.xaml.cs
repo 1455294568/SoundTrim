@@ -85,7 +85,7 @@ namespace SoundHandlePlus
                 filelist.Visibility = Visibility.Visible;
                 if (mainView.Filenames.Count > 0)
                 {
-                    if (MessageBox.Show("队列里还有文件, 是覆盖,否追加?", "提示", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    if (MessageBox.Show(Properties.Resources.Longtips1, Properties.Resources.Warning, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         mainView.Filenames.Clear();
                     }
@@ -119,10 +119,10 @@ namespace SoundHandlePlus
                 {
                     mainView.Filenames.Clear();
                     filelist.Visibility = Visibility.Hidden;
-                    tips.Text = $"操作完成, 共完成了{count}项";
+                    tips.Text = string.Format(Properties.Resources.Longtips2, count);
                     loadingbar.Visibility = Visibility.Hidden;
                 });
-                DelayUIWork(2000, delegate { tips.Text = "请选择文件"; });
+                DelayUIWork(2000, delegate { tips.Text = Properties.Resources.OpenFileTip; });
             });
         }
 

@@ -22,7 +22,7 @@ namespace SoundHandlePlus.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SoundHandlePlus.Properties {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SoundHandlePlus.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace SoundHandlePlus.Properties {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,12 +61,183 @@ namespace SoundHandlePlus.Properties {
         }
         
         /// <summary>
+        ///   查找类似 About 的本地化字符串。
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Add 的本地化字符串。
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Close 的本地化字符串。
+        /// </summary>
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Execute 的本地化字符串。
+        /// </summary>
+        public static string Execute {
+            get {
+                return ResourceManager.GetString("Execute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 File 的本地化字符串。
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 General 的本地化字符串。
+        /// </summary>
+        public static string General {
+            get {
+                return ResourceManager.GetString("General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap hello {
+        public static System.Drawing.Bitmap hello {
             get {
                 object obj = ResourceManager.GetObject("hello", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Help 的本地化字符串。
+        /// </summary>
+        public static string Help {
+            get {
+                return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Languages 的本地化字符串。
+        /// </summary>
+        public static string Languages {
+            get {
+                return ResourceManager.GetString("Languages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 List is not empty, Yes to override, No to Add 的本地化字符串。
+        /// </summary>
+        public static string Longtips1 {
+            get {
+                return ResourceManager.GetString("Longtips1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 {0} Files are done. 的本地化字符串。
+        /// </summary>
+        public static string Longtips2 {
+            get {
+                return ResourceManager.GetString("Longtips2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open 的本地化字符串。
+        /// </summary>
+        public static string Open {
+            get {
+                return ResourceManager.GetString("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please Open a file 的本地化字符串。
+        /// </summary>
+        public static string OpenFileTip {
+            get {
+                return ResourceManager.GetString("OpenFileTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 SoundHandle 的本地化字符串。
+        /// </summary>
+        public static string ProgramName {
+            get {
+                return ResourceManager.GetString("ProgramName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Save 的本地化字符串。
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Saved 的本地化字符串。
+        /// </summary>
+        public static string SaveTip1 {
+            get {
+                return ResourceManager.GetString("SaveTip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Save failed 的本地化字符串。
+        /// </summary>
+        public static string SaveTip2 {
+            get {
+                return ResourceManager.GetString("SaveTip2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Settings 的本地化字符串。
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 SlienceThreshold 的本地化字符串。
+        /// </summary>
+        public static string SlienceThreshold {
+            get {
+                return ResourceManager.GetString("SlienceThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Warning 的本地化字符串。
+        /// </summary>
+        public static string Warning {
+            get {
+                return ResourceManager.GetString("Warning", resourceCulture);
             }
         }
     }

@@ -9,5 +9,7 @@ namespace SoundHandlePlus.Models
     public class ConfigModel
     {
         public sbyte SilenceThreshold { get; set; }
+
+        public string Language { get; set; }
     }
 }

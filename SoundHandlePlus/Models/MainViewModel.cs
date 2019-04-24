@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SoundHandlePlus.Models
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : ViewBase
     {
         private ObservableCollection<string> filenames;
 
@@ -26,13 +26,6 @@ namespace SoundHandlePlus.Models
         private void Filenames_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             NotifyPropertyChanged(nameof(Filenames));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void NotifyPropertyChanged(string info)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
         }
 
     }
